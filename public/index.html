@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scraping With Mongoose</title>
+    <style>
+    body { 
+        /*background-color: teal*/
+        background: url("https://s3.envato.com/files/220512242/Preview.jpg");
+        background-repeat: no-repeat;
+        background-size: cover; 
+    }
+     #wrapper {
+        width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 5%;
+    } 
+     #articles {
+        display: inline-block;
+        overflow: auto;
+        width: 60%;
+        height: 700px;
+    } 
+     #notes {
+        float: right;
+        width: 30%;
+    }
+    textarea, input {
+        display: block;
+        width: 100%;
+        background-color: #FCF5C7;
+    }
+    input {
+        height: 36px;
+        font-size: 24px;
+    }
+    textarea {
+        height: 200px;
+        font-size: 18px;
+    } 
+      
+    .albums {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    }
+    .album {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-gap: 20px;
+    align-items: center;
+    color: white;
+    font-weight: 100;
+    }
+    .card {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    align-items: center;
+    color: white;
+    font-weight: 100;
+    }
+     .album__artwork {
+    width: 100%;
+    } 
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+    <h1>News Scrapper</h1>
+    <h2><i>WIRED edition</i></h2>
+    <div class="albums">
+    <div id="articles"></div>
+    <div id="notes"></div>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
